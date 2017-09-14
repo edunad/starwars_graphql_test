@@ -525,7 +525,7 @@ function parseFilterObject(filterObject, array){
 function filterByKey(array, keyToFilter, filter){
   var arr = [];
   array.forEach(function(data){
-    if(data[keyToFilter].indexOf(filter) != -1){
+    if(data[keyToFilter].search(new RegExp(filter, "i")) != -1){
       arr.push(data)
     }
   });
